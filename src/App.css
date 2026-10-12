@@ -1,0 +1,535 @@
+/* ==========================================================================
+   Portfolio Layout & Component Styling
+   Minimalistic, ample whitespace, low contrast, soft borders
+   ========================================================================== */
+
+.portfolio-app {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+/* ==========================================================================
+   Sticky Header & Navigation
+   ========================================================================== */
+
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem 0 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-primary);
+  z-index: 20;
+  transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+  flex-wrap: wrap;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.brand-logo {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.portfolio-nav {
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-speed) ease;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background-color: var(--bg-surface-hover);
+}
+
+/* ==========================================================================
+   Theme Switcher Control
+   ========================================================================== */
+
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-left: auto;
+}
+
+.theme-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.theme-select {
+  font-family: inherit;
+  font-size: 0.82rem;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 0.3rem 0.65rem;
+  cursor: pointer;
+  outline: none;
+  transition: all var(--transition-speed) ease;
+}
+
+.theme-select:focus {
+  border-color: var(--accent);
+}
+
+/* ==========================================================================
+   Section Layouts
+   ========================================================================== */
+
+.portfolio-section {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  scroll-margin-top: 5.5rem;
+  transition: border-color var(--transition-speed) ease;
+}
+
+/* Hero / About */
+.hero-section {
+  text-align: left;
+  padding: 5.5rem 0 4.5rem;
+}
+
+.hero-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero-bio {
+  max-width: 80%px;
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--transition-speed) ease;
+}
+
+.cta-button.primary {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: 1px solid var(--accent);
+}
+
+.cta-button.primary:hover {
+  opacity: 0.88;
+}
+
+.cta-button.secondary {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.cta-button.secondary:hover {
+  background-color: var(--bg-surface-hover);
+  border-color: var(--accent);
+}
+
+/* Section Headings */
+.section-title-wrap {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Modular Cards Grid & Items
+   ========================================================================== */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.portfolio-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.card-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.card-tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--accent-soft);
+  color: var(--accent);
+  align-self: flex-start;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.card-action {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 0.25rem;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.card-action:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.card-action-btn {
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity var(--transition-speed) ease;
+}
+
+.card-action-btn:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.more-coming-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* ==========================================================================
+   Game Card Specific Styles
+   ========================================================================== */
+
+.game-card-interactive {
+  cursor: pointer;
+}
+
+.game-card-thumb-wrap {
+  width: 100%;
+  height: 150px;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  background-color: var(--bg-surface-hover);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-card-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease;
+}
+
+.game-card-interactive:hover .game-card-thumb {
+  transform: scale(1.03);
+}
+
+.game-card-thumb-fallback {
+  background-color: var(--accent-soft);
+}
+
+.game-thumb-placeholder {
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.games-toggle-wrap {
+  display: flex;
+  
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.games-toggle-btn {
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.games-toggle-btn:hover {
+  border-color: var(--accent);
+  background-color: var(--bg-surface-hover);
+  color: var(--accent);
+}
+
+/* ==========================================================================
+   Game Page View
+   ========================================================================== */
+
+.game-page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 0 4.5rem;
+}
+
+.game-page-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.game-back-btn,
+.game-fullscreen-btn {
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 500;
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.game-back-btn:hover,
+.game-fullscreen-btn:hover {
+  border-color: var(--accent);
+  background-color: var(--bg-surface-hover);
+}
+
+.game-page-header {
+  margin-bottom: 1.75rem;
+}
+
+.game-header-title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.game-page-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.game-page-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.game-frame-wrapper {
+  width: 100%;
+  height: 600px;
+  background-color: #000000;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 4rem;
+}
+
+.game-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.game-suggestions-section {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   Contact Links Grid
+   ========================================================================== */
+
+.contact-links-grid {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.contact-link-item {
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  padding: 0.55rem 1.15rem;
+  text-decoration: none;
+  transition: all var(--transition-speed) ease;
+}
+
+.contact-link-item:hover {
+  border-color: var(--accent);
+  background-color: var(--bg-surface-hover);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.portfolio-footer {
+  padding: 3rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .portfolio-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 0;
+  }
+
+  .theme-switcher {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-section {
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .portfolio-section {
+    padding: 3.5rem 0;
+    scroll-margin-top: 8rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-frame-wrapper {
+    height: 420px;
+  }
+}

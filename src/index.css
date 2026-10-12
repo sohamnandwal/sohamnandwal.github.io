@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Design System & CSS-Variable Theme System
+   Minimalistic, soft color palettes with low contrast and smooth transitions.
+   No neon accents, no AI-like glows.
+   ========================================================================== */
+
+:root,
+[data-theme="nordic-slate"] {
+  --bg-primary: #f4f6f8;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #eaeff4;
+  --text-primary: #252e38;
+  --text-secondary: #637182;
+  --text-muted: #9aa8b7;
+  --accent: #4a6d8c;
+  --accent-soft: #e5edf5;
+  --border-color: #dbe2ea;
+  --border-radius: 10px;
+  --border-radius-sm: 6px;
+  --shadow-sm: 0 2px 8px rgba(37, 46, 56, 0.04);
+  --shadow-md: 0 4px 16px rgba(37, 46, 56, 0.07);
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --transition-speed: 0.25s;
+}
+
+[data-theme="matcha-milk"] {
+  --bg-primary: #f2f5ef;
+  --bg-surface: #fafcf8;
+  --bg-surface-hover: #e7ece2;
+  --text-primary: #283625;
+  --text-secondary: #5e7059;
+  --text-muted: #93a38f;
+  --accent: #5a7b53;
+  --accent-soft: #e5ece2;
+  --border-color: #d8e2d4;
+  --shadow-sm: 0 2px 8px rgba(40, 54, 37, 0.04);
+  --shadow-md: 0 4px 16px rgba(40, 54, 37, 0.07);
+}
+
+[data-theme="warm-terracotta"] {
+  --bg-primary: #fbf7f2;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #f5ece2;
+  --text-primary: #382c26;
+  --text-secondary: #7a685e;
+  --text-muted: #aa998f;
+  --accent: #a36551;
+  --accent-soft: #f6ebe6;
+  --border-color: #ebe0d6;
+  --shadow-sm: 0 2px 8px rgba(56, 44, 38, 0.04);
+  --shadow-md: 0 4px 16px rgba(56, 44, 38, 0.07);
+}
+
+[data-theme="dusk-lavender"] {
+  --bg-primary: #f6f4f8;
+  --bg-surface: #ffffff;
+  --bg-surface-hover: #ece7f1;
+  --text-primary: #312b38;
+  --text-secondary: #6e6478;
+  --text-muted: #a197ab;
+  --accent: #78638c;
+  --accent-soft: #eee8f4;
+  --border-color: #e3dce8;
+  --shadow-sm: 0 2px 8px rgba(49, 43, 56, 0.04);
+  --shadow-md: 0 4px 16px rgba(49, 43, 56, 0.07);
+}
+
+[data-theme="midnight-charcoal"] {
+  --bg-primary: #191b1f;
+  --bg-surface: #22252b;
+  --bg-surface-hover: #292d34;
+  --text-primary: #e3e6eb;
+  --text-secondary: #979ea9;
+  --text-muted: #626975;
+  --accent: #7890a8;
+  --accent-soft: #26303c;
+  --border-color: #2f343d;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.22);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.32);
+}
+
+/* Base resets & typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.65;
+  min-height: 100vh;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
