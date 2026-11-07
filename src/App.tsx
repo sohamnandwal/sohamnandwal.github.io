@@ -133,8 +133,12 @@ function App() {
           <>
             {/* Hero / About Section */}
             <section id="about" className="portfolio-section hero-section">
-              <div className="hero-name-row">
-                <h1 className="hero-name">Soham Nandwal</h1>
+              <div className="hero-content">
+                <div className="hero-text">
+                  <h1 className="hero-name">Soham Nandwal</h1>
+                  <p className="hero-tagline"><i>human & student</i></p>
+                  <p className="hero-bio">B.Tech Engineering Physics @ IIT Roorkee | Physics & Math Enthusiast | Avid Programmer | Tech & Gaming Aficionado</p>
+                </div>
                 <div className="hero-avatar-frame">
                   <img
                     src="/me.jpg"
@@ -147,13 +151,11 @@ function App() {
                   />
                 </div>
               </div>
-              <p className="hero-tagline"><i>human & student</i></p>
-              <p className="hero-bio">B.Tech Engineering Physics @ IIT Roorkee | Physics & Math Enthusiast | Avid Programmer | Tech & Gaming Aficionado</p>
-              {/* <div className="hero-cta-group">
-                <a href="#projects" className="cta-button primary">{'{Projects_CTA_Text}'}</a>
-                <a href="#contact" className="cta-button secondary">{'{Contact_CTA_Text}'}</a>
-              </div> */}
             </section>
+            {/* <div className="hero-cta-group">
+              <a href="#projects" className="cta-button primary">{'{Projects_CTA_Text}'}</a>
+              <a href="#contact" className="cta-button secondary">{'{Contact_CTA_Text}'}</a>
+            </div> */}
 
             {/* Projects Section */}
             {/* <section id="projects" className="portfolio-section">

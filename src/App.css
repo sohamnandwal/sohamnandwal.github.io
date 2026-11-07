@@ -121,41 +121,37 @@
   padding: 5rem 0 3.5rem;
 }
 
-.hero-name-row {
+.hero-content {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 0.5rem;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.hero-text {
+  flex: 1;
 }
 
 .hero-name {
   font-size: 2.5rem;
   font-weight: 700;
   letter-spacing: -0.03em;
-  margin: 0;
+  margin: 0 0 0.5rem;
   color: var(--text-primary);
   line-height: 1.15;
 }
 
 .hero-avatar-frame {
-  width: 72px;
-  height: 72px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2.5px solid var(--border-color);
+  border: 2px solid var(--border-color);
   background-color: var(--bg-surface);
-  box-shadow: var(--shadow-sm);
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition-speed) ease, border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-}
-
-.hero-avatar-frame:hover {
-  transform: scale(1.06);
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
 }
 
 .hero-avatar-img {
@@ -173,10 +169,10 @@
 }
 
 .hero-bio {
-  max-width: 680px;
+  max-width: 620px;
   font-size: 0.98rem;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
+  margin: 0;
   line-height: 1.7;
 }
 
@@ -553,13 +549,15 @@
     padding: 3.5rem 0 2.5rem;
   }
 
-  .hero-name-row {
-    gap: 0.85rem;
+  .hero-content {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
   }
 
   .hero-avatar-frame {
-    width: 60px;
-    height: 60px;
+    width: 105px;
+    height: 105px;
   }
 
   .hero-name {
