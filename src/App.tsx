@@ -7,8 +7,8 @@ import './App.css'
 function App() {
   const [theme, setTheme] = useState<string>(() => {
     const saved = localStorage.getItem('portfolio-theme')
-    const validThemes = ['nordic-slate', 'matcha-milk', 'warm-terracotta', 'dusk-lavender', 'midnight-charcoal']
-    return saved && validThemes.includes(saved) ? saved : 'nordic-slate'
+    const validThemes = ['nordic-frost', 'matcha-garden', 'warm-terracotta', 'twilight-mauve', 'obsidian-night']
+    return saved && validThemes.includes(saved) ? saved : 'nordic-frost'
   })
 
   const [activeGame, setActiveGame] = useState<Game | null>(() => {
@@ -111,11 +111,11 @@ function App() {
             onChange={(e) => handleThemeChange(e.target.value)}
             aria-label="Theme selector"
           >
-            <option value="nordic-slate">Nordic Slate</option>
-            <option value="matcha-milk">Matcha Milk</option>
+            <option value="nordic-frost">Nordic Frost</option>
+            <option value="matcha-garden">Matcha Garden</option>
             <option value="warm-terracotta">Warm Terracotta</option>
-            <option value="dusk-lavender">Dusk Lavender</option>
-            <option value="midnight-charcoal">Midnight Charcoal</option>
+            <option value="twilight-mauve">Twilight Mauve</option>
+            <option value="obsidian-night">Obsidian Night</option>
           </select>
         </div>
       </header>
@@ -133,7 +133,20 @@ function App() {
           <>
             {/* Hero / About Section */}
             <section id="about" className="portfolio-section hero-section">
-              <h1 className="hero-name">Soham Nandwal</h1>
+              <div className="hero-name-row">
+                <h1 className="hero-name">Soham Nandwal</h1>
+                <div className="hero-avatar-frame">
+                  <img
+                    src="/me.jpg"
+                    alt="Soham Nandwal"
+                    className="hero-avatar-img"
+                    onError={(e) => {
+                      const target = e.currentTarget
+                      if (!target.src.endsWith('/Me.jpg')) target.src = '/Me.jpg'
+                    }}
+                  />
+                </div>
+              </div>
               <p className="hero-tagline"><i>human & student</i></p>
               <p className="hero-bio">B.Tech Engineering Physics @ IIT Roorkee | Physics & Math Enthusiast | Avid Programmer | Tech & Gaming Aficionado</p>
               {/* <div className="hero-cta-group">
