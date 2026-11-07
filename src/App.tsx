@@ -234,7 +234,7 @@ function App() {
             <section id="achievements" className="portfolio-section">
               <div className="more-coming-wrap">
                 <h2 className="section-title">More Things Coming Soon...</h2>
-                <p className="section-subtitle">Work in progress</p>
+                <p className="section-subtitle">Work under progress</p>
               </div>
               
             </section>
